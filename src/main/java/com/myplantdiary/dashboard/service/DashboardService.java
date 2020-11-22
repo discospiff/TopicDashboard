@@ -25,6 +25,7 @@ public class DashboardService implements IDashboardService {
     public Set<String> getUnprocessedPhotos() {
           Set<String> difference = new HashSet<String>(dashboardDAO.getPhotoIn());
           difference.removeAll(dashboardDAO.getPhotoOut());
+          difference.removeAll(dashboardDAO.getPhotoException());
           return difference;
     }
 

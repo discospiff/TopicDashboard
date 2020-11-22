@@ -15,7 +15,7 @@ public class DashboardController {
     IDashboardService dashboardService;
 
     @RequestMapping("/")
-    public ModelAndView dashboard() {
+    public ModelAndView fooDashboard() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("dashboard");
 

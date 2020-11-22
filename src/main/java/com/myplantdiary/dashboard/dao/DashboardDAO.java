@@ -13,7 +13,7 @@ public class DashboardDAO implements IDashboardDAO {
     private Set<String> photoOut = new HashSet<>();
     private Set<String> photoException = new HashSet<>();
 
-    @KafkaListener(topics="photoIn", groupId="dashboard")
+    @KafkaListener(topics="photoin", groupId="dashboard")
     public void processPhotoIn(String path) {
         photoIn.add(path);
     }
